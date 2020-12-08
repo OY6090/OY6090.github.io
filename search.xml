@@ -1580,31 +1580,6 @@
     
     
     <entry>
-      <title>模板方法的设计模式</title>
-      <link href="post/328351179.html"/>
-      <url>post/328351179.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200425164856218.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NzM4ODEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><br />代码示例：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">abstract <span class="class"><span class="keyword">class</span> <span class="title">Template</span>&#123;</span></span><br><span class="line">    <span class="comment">//计算某段代码执行所需要花费的时间</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">spendTime</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">this</span>.code();<span class="comment">//不确定的部分、易变的部分</span></span><br><span class="line">        <span class="keyword">long</span> end = Syetem.currentTimeMills();</span><br><span class="line">        System.out.println(<span class="string">&quot;花费的时间为：&quot;</span>+(end-start))</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> abstract <span class="keyword">void</span> <span class="title">code</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubTemplate</span> <span class="title">extends</span> <span class="title">Template</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">code</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>  i= <span class="number">0</span>; i &lt; Math.<span class="built_in">sqrt</span>(i); i++)&#123;</span><br><span class="line">            boolean isFlag = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span>  j =<span class="number">2</span>; j &lt;= Math.<span class="built_in">sqrt</span>(i); j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i % j == <span class="number">0</span>)&#123;</span><br><span class="line">                    isFlag = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(isFlag)&#123;</span><br><span class="line">                System.out.println(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java设计模式 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java设计模式 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>java枚举类</title>
       <link href="post/3305917059.html"/>
       <url>post/3305917059.html</url>
@@ -1647,6 +1622,31 @@
         <tags>
             
             <tag> GitHub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>模板方法的设计模式</title>
+      <link href="post/328351179.html"/>
+      <url>post/328351179.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200425164856218.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NzM4ODEw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /><br />代码示例：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">abstract <span class="class"><span class="keyword">class</span> <span class="title">Template</span>&#123;</span></span><br><span class="line">    <span class="comment">//计算某段代码执行所需要花费的时间</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">spendTime</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">this</span>.code();<span class="comment">//不确定的部分、易变的部分</span></span><br><span class="line">        <span class="keyword">long</span> end = Syetem.currentTimeMills();</span><br><span class="line">        System.out.println(<span class="string">&quot;花费的时间为：&quot;</span>+(end-start))</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> abstract <span class="keyword">void</span> <span class="title">code</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubTemplate</span> <span class="title">extends</span> <span class="title">Template</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">code</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>  i= <span class="number">0</span>; i &lt; Math.<span class="built_in">sqrt</span>(i); i++)&#123;</span><br><span class="line">            boolean isFlag = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span>  j =<span class="number">2</span>; j &lt;= Math.<span class="built_in">sqrt</span>(i); j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i % j == <span class="number">0</span>)&#123;</span><br><span class="line">                    isFlag = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(isFlag)&#123;</span><br><span class="line">                System.out.println(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java设计模式 </tag>
             
         </tags>
       
